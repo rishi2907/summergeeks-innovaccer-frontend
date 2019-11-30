@@ -110,12 +110,13 @@ button:hover {
   margin-bottom: 15px;
 }
 
-.fullName {
+.fullName,.hostname {
   width: 100%;
 }
 
 .email,
-.password {
+.password,
+.address {
   width: 100%;
 }
 

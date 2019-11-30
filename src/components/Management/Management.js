@@ -33,7 +33,7 @@ class Management extends Component{
 
   render(){
     if(this.state.showForm1===0){
-      return(<div> <Card2 show={this.show_form1} hide={this.hide_form1} /><Card1 show={this.show_form1} hide={this.hide_form1} /></div>);
+      return(<div style={{display:'flex'}}> <Card2 show={this.show_form1} hide={this.hide_form1} /><Card1 show={this.show_form1} hide={this.hide_form1} /></div>);
 
     }
     else if(this.state.showForm1===1){
