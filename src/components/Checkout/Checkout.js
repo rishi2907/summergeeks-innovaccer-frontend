@@ -80,16 +80,16 @@ handleSubmit = (event)=>{
 
   event.preventDefault();
 
-  for (var i = 0; i < this.state.result.length; i++){
-    var obj = this.state.result[i];
-    var val = obj.email;
-    console.log(val);
-    if(val === event.target.value){
-        this.state.id = obj.id;
-
-    }
-
-  }
+  // for (var i = 0; i < this.state.result.length; i++){
+  //   var obj = this.state.result[i];
+  //   var val = obj.email;
+  //   console.log(val);
+  //   if(val === event.target.value){
+  //       this.state.id = obj.id;
+  //
+  //   }
+  //
+  // }
   // if(this.state.id === null){
   //   this._errors.email = "Either already Checkout Or Not Checkin With this Email";
   // }
