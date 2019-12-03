@@ -20,6 +20,7 @@ class Checkout extends Component{
       result:"",
       email:"",
       id:null,
+      success:""
     }
 
   };
@@ -65,6 +66,10 @@ handleEmail = (event)=>{
   }else{
       this._errors.email = "";
   }
+
+
+
+
   this.setState({
       email:event.target.value
   })
@@ -79,11 +84,14 @@ handleSubmit = (event)=>{
     var val = obj.email;
     console.log(val);
     if(val === event.target.value){
-        _error.id = obj.id;
+        this.state.id = obj.id;
 
     }
 
   }
+  // if(this.state.id === null){
+  //   this._errors.email = "Either already Checkout Or Not Checkin With this Email";
+  // }
 
   if(this.state.email !=="" && this._errors.email === ""){
 
@@ -145,6 +153,7 @@ render(){
     <div className='wrapper'>
     <div className='form-wrapper'>
     <h2>Visitor Checkout</h2>
+    <small className="text-success">{this.state.success}</small>
     <form onSubmit={this.handleSubmit} noValidate >
     <small className="text-danger">{this._errors.email}</small>
     <div className='email'>
@@ -152,9 +161,6 @@ render(){
     <input type='email' name='email'  value={this.state.email} onChange={this.handleEmail} />
     </div>
 
-    <div className='info'>
-    <small>Password must be eight characters in length.</small>
-    </div>
     <div className='submit'>
     <button>Create</button>
     </div>

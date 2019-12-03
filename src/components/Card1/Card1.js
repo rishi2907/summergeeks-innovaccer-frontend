@@ -2,6 +2,9 @@ import React,{ Component } from 'react';
 import './Card1.css';
 import { Button,Card } from 'react-bootstrap';
 
+const divStyle = {
+    backgroundColor: 'white'
+};
 
 class Card1 extends Component{
 
@@ -21,15 +24,14 @@ class Card1 extends Component{
     return(
       <div>
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+
       <Card.Body>
-      <Card.Title>Visitor</Card.Title>
+      <Card.Title><center>Visitor</center></Card.Title>
       <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the cards content.
+      <center>For Visitor Checkin And Checkout</center>
       </Card.Text>
-      <Button variant="primary" onClick={this.handle_click1}> checkin</Button>
-      <Button variant="primary" onClick={this.handle_click2}>checkout</Button>
+      <Button onClick={this.handle_click1}> checkin</Button>
+      <Button style={divStyle} onClick={this.handle_click2}>checkout</Button>
       </Card.Body>
       </Card>
       </div>

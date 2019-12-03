@@ -15,12 +15,11 @@ class Card2 extends Component{
     return(
       <div>
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+
       <Card.Body>
-      <Card.Title>Host</Card.Title>
+      <Card.Title><center>Host</center></Card.Title>
       <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the cards content.
+      <center>For Host Registration</center>
       </Card.Text>
       <Button variant="primary" onClick={this.handle_click}>Host !</Button>
       </Card.Body>

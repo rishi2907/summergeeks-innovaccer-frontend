@@ -78,10 +78,10 @@ componentDidMount(){
         var name = obj.name;
         var nameEmail = name + "    (" + email + ")";
         console.log(nameEmail);
-        var obj={"value":nameEmail,"text":nameEmail};
+        var obj1={"value":email,"text":nameEmail};
         //console.log("rishi");
         this.setState({
-          host: this.state.host.concat([obj])
+          host: this.state.host.concat([obj1])
         })
       }
         console.log(result);
@@ -190,6 +190,7 @@ handleSubmit = (event)=>{
                           email: this.state.email,
                           phone: this.state.phoneNumber,
                           //address: this.state.address,
+                          hostEmail: this.state.hostname,
                           hostName: this.state.hostname,
                           checkInTime:Date()
 
@@ -207,6 +208,7 @@ handleSubmit = (event)=>{
                             email: this.state.email,
                             phone: this.state.phoneNumber,
                             hostName: this.state.hostname,
+                            hostEmail: this.state.hostname,
                             checkInTime:Date()
                           })
                       })

@@ -63,18 +63,19 @@ class Host extends Component{
         }else{
             this._errors.email = "";
         }
-
+        if(this.state.result.length >0)
         for (var i = 0; i < this.state.result.length; i++){
           var obj = this.state.result[i];
           var val = obj.email;
           if(val === event.target.value){
               this._errors.email = "You already registered with this Email";
           }
+      }
 
         this.setState({
             email:event.target.value
         })
-    }
+
   }
 
   handleName = (event)=>{

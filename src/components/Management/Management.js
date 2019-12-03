@@ -33,7 +33,27 @@ class Management extends Component{
 
   render(){
     if(this.state.showForm1===0){
-      return(<div style={{display:'flex'}}> <Card2 show={this.show_form1} hide={this.hide_form1} /><Card1 show={this.show_form1} hide={this.hide_form1} /></div>);
+      return(<div className='wrapper1'>
+        <div className="h1">Welcome To Innovaccer Entry Management System </div><pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <pre></pre>
+        <div className="row">
+
+          <div className="col">
+            <div className="mx-auto mr-5-md">
+              <Card2 show={this.show_form1} hide={this.hide_form1} />
+            </div>
+          </div>
+          <div className="col">
+            <div className="ml-5-md">
+              <Card1 show={this.show_form1} hide={this.hide_form1} />
+            </div>
+          </div>
+        </div>
+      </div>);
 
     }
     else if(this.state.showForm1===1){
