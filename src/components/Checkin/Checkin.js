@@ -269,7 +269,7 @@ handleSubmit = (event)=>{
             </div>
 
             <div className='submit'>
-              <button>Create</button>
+              <button>CheckIn</button>
             </div>
           </form>
         </div>

@@ -174,7 +174,7 @@ render(){
     </div>
 
     <div className='submit'>
-    <button>Create</button>
+    <button>CheckOut</button>
     </div>
     </form>
     </div>
