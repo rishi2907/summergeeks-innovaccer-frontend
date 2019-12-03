@@ -7,9 +7,15 @@ import Management from './components/Management/Management';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends Component{
-  state ={
-    SideDrawerOpen:false,
-  };
+
+  constructor(){
+    super();
+    this.state={
+      show : 0,
+      SideDrawerOpen:false,
+
+}
+}
 
   drawerToggleClickHandler =()=>{
     this.setState((prevstate)=>{
@@ -30,17 +36,20 @@ class App extends Component{
     //  sideDrawer = <SideDrawer/>;
       backdrop =<Backdrop click={this.backdropClickHandler} />;
     }
-  return (
-  <div className="App" style={{height :'100%'}}>
-  <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-  <SideDrawer show={this.state.SideDrawerOpen} />
-  {backdrop}
-  <main style={{marginTop:'50px',background:'blue',height:'92vh'}}>
-  <Management / >
-  </main>
+    if(this.state.show === 0 ){
+      return (
+      <div className="App" style={{height :'100%'}}>
+      <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+      <SideDrawer show={this.state.SideDrawerOpen} />
+      {backdrop}
+      <main style={{marginTop:'50px',background:'blue',height:'92vh'}}>
+      <Management / >
+      </main>
 
-  </div>
-  );
+      </div>
+      );
+    }
+
 }
 }
 
