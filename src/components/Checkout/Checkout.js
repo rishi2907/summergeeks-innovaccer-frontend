@@ -67,7 +67,15 @@ handleEmail = (event)=>{
   }else{
       this._errors.email = "";
   }
+  for (var i = 0; i < this.state.result.length; i++){
+    var obj = this.state.result[i];
+    var val = obj.email;
+    console.log(val);
+    if(val === event.target.value){
+        this.state.id = obj.id;
 
+    }
+}
 
 
 
@@ -104,6 +112,8 @@ handleSubmit = (event)=>{
       email: this.state.email,
 
     }));
+
+    console.log(this.state.id);
 
 
     fetch(this.state.url+ "/visitor/checkout", {
