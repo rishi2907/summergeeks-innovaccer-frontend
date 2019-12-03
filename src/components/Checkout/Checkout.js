@@ -98,9 +98,9 @@ handleSubmit = (event)=>{
   //   }
   //
   // }
-  // if(this.state.id === null){
-  //   this._errors.email = "Either already Checkout Or Not Checkin With this Email";
-  // }
+  if(this.state.id === null){
+    this._errors.email = "Either already Checkout Or Not Checkin With this Email";
+  }
 
   if(this.state.email !=="" && this._errors.email === ""){
 
