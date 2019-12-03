@@ -16,7 +16,7 @@ class Host extends Component{
   constructor(){
     super();
     this.state={
-      url : "http://localhost:5000",
+      //url : "http://localhost:5000",
       url:"https://innovaccer.herokuapp.com",
       email : "",
       name : "",
